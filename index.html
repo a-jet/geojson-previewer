@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoJSON Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- URL Input Section -->
+        <div class="url-section">
+            <h2>Load GeoJSON from URL</h2>
+            <input type="text" id="geojson-url" placeholder="Enter GeoJSON URL (e.g., GitHub raw URL)">
+            <button id="load-url-button">Load from URL</button>
+        </div>
+
+        <!-- Editor Section -->
+        <div class="editor-section collapsible">
+
+
+            <div class="section-header">
+                <h2>GeoJSON Editor</h2>
+                <button class="collapse-button">Collapse</button>
+            </div>
+
+            <div class="section-content">
+                <div class="dark-mode-toggle">
+                    <label for="dark-mode">Dark Mode</label>
+                    <input type="checkbox" id="dark-mode" checked>
+                </div>
+                <div id="editor-container" style="height: 400px; border: 1px solid #ccc;"></div>
+                <button id="preview-button">Preview on Map</button>
+            </div>
+        </div>
+
+        <!-- Map Preview Section -->
+        <div class="map-section collapsible">
+            <div class="section-header">
+                <h2>Map Preview</h2>
+                <button class="collapse-button">Collapse</button>
+            </div>
+            <div class="section-content">
+                <div id="map" style="height: 600px; border: 1px solid #ccc;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Monaco Editor -->
+    <script src="https://unpkg.com/monaco-editor@0.33.0/min/vs/loader.js"></script>
+    <!-- Your Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
