@@ -140,5 +140,5 @@ window.onload = function() {
     // Simulate button click
     setTimeout(() => {
         document.getElementById("load-url-button").click();
-    }, 500); // Delay for better UX
+    }, 20); // Delay for better UX
 };
